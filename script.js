@@ -2,6 +2,7 @@ const board = document.getElementById("board");
 const status = document.getElementById("status");
 const resetButton = document.getElementById("reset");
 const modeButton = document.getElementById("mode-select");
+const instructionsButton = document.getElementById("instructions"); // New button for instructions
 const themeButton = document.getElementById("theme-toggle");
 const undoButton = document.getElementById("undo");
 let currentPlayer = "X";
@@ -72,6 +73,10 @@ function aiMove() {
     currentPlayer = "X";
 }
 
+function showInstructions() {
+    alert("Instructions:\n1. Click on a cell to make your move.\n2. The first player to get 3 in a row wins.\n3. Use the 'Undo Move' button to revert your last move.\n4. Click 'Restart Game' to start over.");
+}
+
 function resetGame() {
     gameBoard.fill("");
     history = [];
@@ -89,4 +94,5 @@ function updateScores() {
 createBoard();
 resetButton.addEventListener("click", resetGame);
 modeButton.addEventListener("click", () => { vsAI = !vsAI; modeButton.textContent = vsAI ? "Switch to Player vs Player" : "Switch to Player vs AI"; resetGame(); });
+instructionsButton.addEventListener("click", showInstructions); // Event listener for instructions button
 themeButton.addEventListener("click", () => document.body.classList.toggle("light-mode"));

@@ -44,7 +44,7 @@ body {
     font-size: 1.5em;
     margin-top: 20px;
 }
-#reset, #mode-select, #theme-toggle, #undo {
+#reset, #mode-select, #theme-toggle, #undo, #instructions {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 1.2em;
@@ -55,6 +55,21 @@ body {
     font-weight: bold;
     border-radius: 5px;
     transition: background 0.3s ease;
+}
+#instructions {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    background: #50fa7b;
+    color: #282a36;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+#instructions:hover {
+    background: #40d67c;
 }
 #reset:hover, #mode-select:hover, #theme-toggle:hover, #undo:hover {
     background: #40d67c;
